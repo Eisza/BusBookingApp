@@ -3,6 +3,7 @@ package com.example.bus_booking_app;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -55,6 +56,8 @@ public class customer extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Toast.makeText(customer.this, "Authentication SUCCESS.",
                                     Toast.LENGTH_SHORT).show();
+                            Intent i = new Intent(customer.this,MainActivity.class);
+                            startActivity(i);
                         } else {
                             // If sign in fails, display a message to the user.
                             Toast.makeText(customer.this, "Authentication failed.",
