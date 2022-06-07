@@ -13,4 +13,20 @@
         android:text="Log Out"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/adminsettings"
+        android:layout_width="106dp"
+        android:layout_height="65dp"
+        android:text="Buses"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="191dp"
+        android:layout_height="64dp"
+        android:text="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/adminsettings"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

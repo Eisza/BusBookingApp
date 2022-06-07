@@ -16,29 +16,34 @@ import java.util.HashMap;
 public class MainActivity extends AppCompatActivity {
 
     Button logout;
+    Button admin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        admin = findViewById(R.id.adminsettings);
+
+
+        admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+        //logout button
         logout = findViewById(R.id.logout);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Toast.makeText(MainActivity.this, "Logged out", Toast.LENGTH_SHORT).show();
 
-
-                HashMap<String, Object> map = new HashMap<>();
-                map.put("id","123");
-                map.put("booked", true);
-                FirebaseDatabase.getInstance().getReference().updateChildren(map);
-
-              //  FirebaseAuth.getInstance().signOut();
-               // Toast.makeText(MainActivity.this, "Logged out", Toast.LENGTH_SHORT).show();
-
-
-               // startActivity(new Intent(MainActivity.this,customer.class));
+                startActivity(new Intent(MainActivity.this,customer.class));
 
 
             }
