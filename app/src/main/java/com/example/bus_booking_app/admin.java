@@ -14,6 +14,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 public class admin extends AppCompatActivity {
 
@@ -24,6 +28,11 @@ public class admin extends AppCompatActivity {
         setContentView(R.layout.activity_admin);
 
 
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("Name","JEJE");
+        map.put("Admin","yes");
+
+        FirebaseDatabase.getInstance().getReference().child("admins").updateChildren(map);
 
     }
 

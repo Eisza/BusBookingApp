@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class StartActivity extends AppCompatActivity {
 
     Button custbut;
     Button admbut;
@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_start);
 
         sgubut = findViewById(R.id.butsgu);
         admbut = findViewById(R.id.butadmin);
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         sgubut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,signup.class));
+                startActivity(new Intent(StartActivity.this,signup.class));
                 finish();
             }
         });
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         admbut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,admin.class));
+                startActivity(new Intent(StartActivity.this,admin.class));
                 finish();
             }
         });
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         custbut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,customer.class));
+                startActivity(new Intent(StartActivity.this,customer.class));
                 finish();
             }
         });
