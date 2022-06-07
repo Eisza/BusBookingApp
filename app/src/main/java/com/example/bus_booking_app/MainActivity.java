@@ -24,14 +24,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        //FirebaseAuth auth =  FirebaseAuth.getInstance();
-
         admin = findViewById(R.id.adminsettings);
 
 
         admin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, admin.class));
+
             }
         });
 
