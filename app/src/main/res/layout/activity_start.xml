@@ -18,34 +18,21 @@
 
     <Button
         android:id="@+id/butcust"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="57dp"
         android:minWidth="115dp"
-        android:text="Customer"
-        app:layout_constraintEnd_toStartOf="@+id/butsgu"
+        android:text="Login"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/butsgu" />
 
     <Button
         android:id="@+id/butsgu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="132dp"
+        android:layout_height="56dp"
         android:layout_marginBottom="32dp"
         android:minWidth="115dp"
         android:text="Sign Up"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:id="@+id/butadmin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minWidth="115dp"
-        android:text="Admin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/butsgu"
-        app:layout_constraintTop_toTopOf="@+id/butsgu" />
 </androidx.constraintlayout.widget.ConstraintLayout>

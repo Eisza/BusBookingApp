@@ -21,18 +21,29 @@ import java.util.HashMap;
 
 public class admin extends AppCompatActivity {
 
+    Button add;
+    EditText edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
 
+        //add = findViewById(R.id.button);
 
-        HashMap<String, Object> map = new HashMap<>();
-        map.put("Name","JEJE");
-        map.put("Admin","yes");
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String txt_name = edit.getText().toString();
+                if(txt_name.isEmpty()){
 
-        FirebaseDatabase.getInstance().getReference().child("admins").updateChildren(map);
+                }else{
+                    FirebaseDatabase.getInstance().getReference().child("Bus").push().child("1AM").child("1").setValue(true);
+                }
+            }
+        });
+
+
 
     }
 
